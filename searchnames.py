@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title( 'Streamlit - Search names')
+st.title( 'Streamlit - Buscar Nombres')
 
 DATA_URL = ('dataset.csv')
 
@@ -12,11 +12,11 @@ def load_data_byname(name):
 
     return filtered_data_byname
 
-myname = st.text_input( 'Name :')
+myname = st.text_input( 'Nombre :')
 
 if (myname):
     filterbyname = load_data_byname(myname)
     count_row = filterbyname.shape[0] # Gives number of rows
-    st.write(f"Total names : {count_row}")
+    st.write(f"Total nombres: {count_row}")
 
     st.dataframe (filterbyname)
