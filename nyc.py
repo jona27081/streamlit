@@ -36,7 +36,7 @@ if st.sidebar.checkbox('Recorridos por hora '):
 
 
 # Some number in the range 0-23
-hour_to_filter = st.slider('Hora', 0, 23, 17)
+hour_to_filter = st.sidebar.slider('Hora', 0, 23, 17)
 filtered_data = data[data[DATE_COLUMN].dt.hour == hour_to_filter]
 
 st.subheader('Map of all pickups at %s:00' % hour_to_filter)
