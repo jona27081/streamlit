@@ -28,7 +28,7 @@ if st.sidebar.checkbox('Ver datos sin procesar'):
     st.subheader('Datos sin procesar ')
     st.write(data)
 
-if st.sidebar.checkbox('Recorridos por hora: '):
+if st.sidebar.checkbox('Recorridos por hora '):
     st.subheader('Numero de recorridos por hora: ')
 
     hist_values = np.histogram(data[DATE_COLUMN].dt.hour, bins=24, range=(0,24))[0]
