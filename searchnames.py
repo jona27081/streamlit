@@ -8,7 +8,7 @@ DATA_URL = ('https://firebasestorage.googleapis.com/v0/b/calculadora-4c7ba.appsp
 @st.cache
 def load_data_byname(name):
     data = pd.read_csv(DATA_URL)
-    filtered_data_byname = data[data['name'].str.contains(name) ]
+    filtered_data_byname = data[data['ame'].str.contains(name) ]
 
     return filtered_data_byname
 
